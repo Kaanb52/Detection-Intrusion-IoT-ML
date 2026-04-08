@@ -18,6 +18,7 @@ Ce projet vise à analyser la robustesse d'intelligences artificielles non super
 ## Architecture du Dépôt
 
 * `data/` : Échantillons de données stérilisés et allégés (Trafic normal et mixte). *(Note : Le dataset original de 3 millions de lignes n'est pas hébergé ici pour des raisons de volumétrie).*
+  * **Attention :** Le dossier `processed` (ou le fichier qu'il contient) a été compressé en `.zip` pour respecter les limites de stockage. **Veuillez l'extraire avant d'exécuter les carnets.**
 * `notebooks/` : 
   * `01_EDA_BoT_IoT.ipynb` : Analyse exploratoire des données.
   * `02_Crash_Test_Phase3.ipynb` : Entraînement des modèles Baseline et Crash-Test.
@@ -36,7 +37,8 @@ En faisant "respirer" l'attaque mathématiquement, le pirate parvient à frôler
 Projection PCA en 2D de l'Espace Latent de l'Autoencoder. On observe comment l'injection progressive de fausses données (du point vert au point rouge) extrait mathématiquement le comportement du capteur hors de sa zone de normalité.
 ![Espace Latent PCA](images/Latent_Space_Trajectory.png)
 
-## Comment lancer le projet en local
+##  Comment lancer le projet en local
 1. Clonez ce dépôt : `git clone https://github.com/Kaanb52/Detection-Intrusion-IoT-ML.git`
-2. Installez les dépendances requises : `pandas`, `numpy`, `scikit-learn`, `tensorflow`, `matplotlib`.
-3. Exécutez les notebooks dans l'ordre numérique depuis un environnement Jupyter.
+2. Dézippez l'archive située dans le dossier `data/` pour restaurer les données traitées.
+3. Installez les dépendances requises : `pandas`, `numpy`, `scikit-learn`, `tensorflow`, `matplotlib`.
+4. Exécutez les notebooks dans l'ordre numérique depuis un environnement Jupyter.
